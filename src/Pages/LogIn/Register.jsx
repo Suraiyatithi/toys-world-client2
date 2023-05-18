@@ -64,7 +64,9 @@ if (password.length < 6) {
            return
         }}
     return (
-        <Container className='w-50 text-dark'>
+        <div className='row row-cols-sm-1 row-cols-lg-2'>
+        <div className="col"></div>
+        <Container className='col me-3 mt-4  text-white'>
         <h3>Please Register</h3>
         <Form onSubmit={handleRegister} name='From'>
             <Form.Group className="mb-3" controlId="formBasicname">
@@ -110,6 +112,7 @@ if (password.length < 6) {
             </Form.Text>
         </Form>
     </Container>
+    </div>
     );
 };
 

@@ -51,8 +51,10 @@ const Login = () => {
     }
    
     return (
-        <div>
-                 <Container className='w-50 text-dark'>
+        <div className='row row-cols-sm-1 row-cols-lg-2'>
+            <div className="col"></div>
+           
+                 <Container className='col w-50 mb-5 mt-5 pb-5 pt-5  me-3 text-white'>
       <h3  className='mt-5'>Please Login</h3>
       <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -73,10 +75,10 @@ const Login = () => {
               Do not Have an Account? <Link className='text-purple text-decoration-none' to="/register">Register</Link>
           </Form.Text>
           <Form.Text>
-          <div>
+          <div className='mb-5'>
                     <button style={{background:"brown"}} onClick={handleGoogleSignIn} className="btn  mt-4 ps-5 pe-5 text-white"><FaGoogle></FaGoogle> Sign in with google</button>
                     </div>
-                    <div className="Text-danger">{wrong}</div>
+                    <div className="Text-danger mb-5">{wrong}</div>
           </Form.Text>
 
       </Form>

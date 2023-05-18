@@ -22,6 +22,9 @@ const Header = () => {
                             <h6>Home</h6>
   </Nav>
           
+  <Nav className='me-3 '><Link to='/blog'> <h6>Blogs</h6></Link></Nav>
+                <Nav>
+                       
           <Nav className='me-3'>
             <h6>All Toys </h6>
         </Nav>
@@ -31,9 +34,7 @@ const Header = () => {
           <Nav className='me-3'>
             <h6>Add a Toys </h6>
           </Nav>
-          <Nav className='me-3 '><h6>Blogs</h6></Nav>
-                <Nav>
-                              {/* {
+                {/* {
                                 user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
                             } */}
   
