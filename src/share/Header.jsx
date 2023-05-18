@@ -26,7 +26,7 @@ const Header = () => {
                 <Nav>
                        
           <Nav className='me-3'>
-            <h6>All Toys </h6>
+           <Link to='/alltoys'> <h6>All Toys </h6></Link>
         </Nav>
           <Nav className='me-3'>
             <h6>My Toys </h6>
