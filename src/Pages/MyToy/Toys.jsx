@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import UpdateModal from "./UpdateModal";
+import { AiFillDelete,AiFillEdit} from "react-icons/ai";
 
 const Toys = ({toy,handleDelete,modal,setmodal,handleToyUpdate}) => {
       const{_id,sellerName,toyName,subCategory,price,availableQuantity,rating,picture,description}=toy;
@@ -16,8 +17,8 @@ const Toys = ({toy,handleDelete,modal,setmodal,handleToyUpdate}) => {
         <td className="col">{rating}</td>
         <td className="col ps-5">{availableQuantity}</td>
         <td className="col ps-5">
-            <button onClick={()=>handleDelete(_id)}>D</button>
-            <button onClick={()=>setmodal(true)}>Up</button>
+            <button className="btn me-2" onClick={()=>handleDelete(_id)}><AiFillDelete></AiFillDelete></button>
+            <button className="btn" onClick={()=>setmodal(true)}><AiFillEdit></AiFillEdit></button>
             <UpdateModal
                     show={modal}
                     onHide={() => setmodal(false)}
