@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import DisneyToy from "./DisneyToy";
 import Header from "../../share/Header";
-import bg from '../../assets/3644477.jpg'
+import bg from '../../assets/3644477.jpg';
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
     const[disneytoys,setdisneytoys]=useState([]);
@@ -60,7 +61,10 @@ const AllToys = () => {
         <td>{searchResult.subCategory}</td>
         <td>${searchResult.price}</td>
         <td>{searchResult.availableQuantity}</td>
-        <td><button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button></td>
+        <td><Link >
+          <button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button>
+          </Link>
+          </td>
       </tr>
     
      

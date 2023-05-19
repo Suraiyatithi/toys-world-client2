@@ -15,7 +15,7 @@ const Blog = () => {
         <Header></Header>
       
         <div   className=' text-center'>
-           <h3 className='text-center text-warning p-5'>Here is Our Daily Blog Page</h3> 
+           <h3 style={{color:"darkmagenta"}} className='text-center p-5'>Here is Our Daily Blog Page</h3> 
            <div className="m-4">
 
     <div className='row  row-cols-1 text-center'>

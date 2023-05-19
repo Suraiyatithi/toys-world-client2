@@ -32,7 +32,7 @@ const Header = () => {
             <h6>My Toys </h6>
           </Nav>
           <Nav className='me-3'>
-            <h6>Add a Toys </h6>
+          <Link to='/addtoys'>  <h6>Add a Toys </h6></Link>
           </Nav>
                 {/* {
                                 user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
