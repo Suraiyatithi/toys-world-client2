@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import UpdateModal from "./UpdateModal";
 
-const Toys = ({toy,handleDelete}) => {
+const Toys = ({toy,handleDelete,modal,setmodal,handleToyUpdate}) => {
       const{_id,sellerName,toyName,subCategory,price,availableQuantity,rating,picture,description}=toy;
     return (
     
@@ -16,7 +17,13 @@ const Toys = ({toy,handleDelete}) => {
         <td className="col ps-5">{availableQuantity}</td>
         <td className="col ps-5">
             <button onClick={()=>handleDelete(_id)}>D</button>
-            <button>Up</button>
+            <button onClick={()=>setmodal(true)}>Up</button>
+            <UpdateModal
+                    show={modal}
+                    onHide={() => setmodal(false)}
+                    toy={toy}
+                    handleToyUpdate={handleToyUpdate}
+                  />
 
 
 

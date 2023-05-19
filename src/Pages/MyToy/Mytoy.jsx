@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Toys from "./Toys";
@@ -12,12 +13,23 @@ import Swal from "sweetalert2";
 const Mytoy = () => {
     const { user } = useContext(AuthContext);
     const [toys, settoys] = useState([]);
+    const [modal,setmodal]=React.useState(false)
+    const [over, setover] = useState(false);
     const url = `http://localhost:5000/mytoys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => settoys(data))
-    }, [url]);
+    }, [url,user,over]);
+
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/mytoys/${user?.email}`)
+    //       .then((res) => res.json())
+    //       .then((data) => {
+    //         console.log(data);
+    //         settoys(data);
+    //       });
+    //   }, [user, over]);
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -52,6 +64,28 @@ const Mytoy = () => {
             }
         })
     }
+    
+    const handleToyUpdate=(data)=>{
+        console.log(data);
+        fetch(`http://localhost:5000/mytoys/${data._id}`,{
+            method:"PUT",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(data)
+        })
+        .then((res)=>res.json())
+        .then((result)=>{
+            if(result.modifiedCount> 0){
+               setover(!over)
+               Swal.fire({
+                title: 'Success!',
+                text: 'Coffee Updated Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+            }
+            console.log(result);
+        })
+    }
     return (
 <div className="">
     <Header></Header>
@@ -79,6 +113,9 @@ const Mytoy = () => {
                         key={toy._id}
                         toy={toy}
                         handleDelete={handleDelete}
+                        modal={modal}
+                        setmodal={setmodal}
+                        handleToyUpdate={handleToyUpdate}
                     ></Toys>)
                 }
 
