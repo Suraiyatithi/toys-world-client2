@@ -52,7 +52,7 @@ const AllToys = () => {
         <th>Sub Category</th>
         <th>Price</th>
         <th>Available Quantity</th>
-        <th></th>
+        <th>     </th>
       </tr>
     </thead>
     <tbody className="p-5 m-5 border shadow-lg pb-5 pt-5">

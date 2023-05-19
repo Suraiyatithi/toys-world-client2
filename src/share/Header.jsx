@@ -2,10 +2,13 @@
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/magicalland.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 
 const Header = () => {
+    const {user}=useContext(AuthContext)
     return (
         <div >
           
@@ -29,7 +32,7 @@ const Header = () => {
            <Link to='/alltoys'> <h6>All Toys </h6></Link>
         </Nav>
           <Nav className='me-3'>
-            <h6>My Toys </h6>
+           <Link to='/mytoys'> <h6>My Toys </h6></Link>
           </Nav>
           <Nav className='me-3'>
           <Link to='/addtoys'>  <h6>Add a Toys </h6></Link>
@@ -38,12 +41,12 @@ const Header = () => {
                                 user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
                             } */}
   
-{/* {
+{
     user && <div className="profile">
         <img style={{height:"30px",weight:"30px"}} className='img img-fluid rounded-circle mt-2 ms-4' src={user?.photoURL}></img>
     <div className="name">{user.displayname}</div>
     </div>
-} */}
+}
 
                           
                                 <Button  className='ms-3 '  style={{background:"LightSeaGreen"}}>Logout</Button>

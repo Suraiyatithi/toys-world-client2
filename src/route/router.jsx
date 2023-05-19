@@ -10,6 +10,7 @@ import Blog from '../Pages/Blogs/Blog'
 import AllToys from "../Pages/Alltoys/AllToys";
 import Showall from "../share/Showall";
 import Addtoy from "../Pages/AddToy/Addtoy";
+import Mytoy from "../Pages/MyToy/Mytoy";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
     {
       path:"addtoys",
       element:<Addtoy></Addtoy>
+    },
+    {
+      path:'mytoys',
+      element:<Mytoy></Mytoy>
     }
   ]);
   export default router;
