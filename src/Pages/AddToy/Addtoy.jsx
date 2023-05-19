@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import Header from "../../share/Header";
 import { Container } from "react-bootstrap";
 import bg from '../../assets/login1.jpg'
+import Footer from "../../share/Footer";
 
 
 
@@ -128,6 +129,7 @@ const Addtoy = () => {
            
 </div>
 </Container>
+<Footer></Footer>
         </div>
     );
 };

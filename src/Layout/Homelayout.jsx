@@ -1,5 +1,6 @@
 import Banner from "../Pages/Home/Banner";
 import Header from "../share/Header";
+import Footer from "../share/Footer";
 
 
 
@@ -8,6 +9,7 @@ const Homelayout = () => {
         <div>
            <Header></Header>
            <Banner></Banner>
+           <Footer></Footer>
 
         </div>
     );

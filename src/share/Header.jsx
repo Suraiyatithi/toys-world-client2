@@ -48,7 +48,7 @@ const Header = () => {
                           
                                 <Button  className='ms-3 '  style={{background:"LightSeaGreen"}}>Logout</Button>
                                 <Link to="/login">
-                                    <Button className='ms-3' style={{background:"LightSeaGreen"}}>Login</Button>
+                                    <Button className='ms-3' style={{background:"LightSEaGreen"}}>Login</Button>
                                 </Link>
                             
                         </Nav>

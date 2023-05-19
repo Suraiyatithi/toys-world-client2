@@ -3,6 +3,7 @@ import DisneyToy from "./DisneyToy";
 import Header from "../../share/Header";
 import bg from '../../assets/3644477.jpg';
 import { Link } from "react-router-dom";
+import Footer from "../../share/Footer";
 
 const AllToys = () => {
     const[disneytoys,setdisneytoys]=useState([]);
@@ -100,6 +101,7 @@ const AllToys = () => {
             </div>
 
            </div>
+           <Footer></Footer>
         </div>
     );
 };

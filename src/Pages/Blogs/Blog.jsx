@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Header from '../../share/Header';
 import bg1 from '../../assets/blog.jpg'
 import bg from '../../assets/3644477.jpg'
+import Footer from '../../share/Footer';
 
 
 const Blog = () => {
@@ -100,6 +101,7 @@ const Blog = () => {
    
  </div>
  </div>
+ <Footer></Footer>
 
  </div>
     );
