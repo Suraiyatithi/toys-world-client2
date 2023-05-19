@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import Header from "../../share/Header";
+import { Container } from "react-bootstrap";
+import bg from '../../assets/login1.jpg'
 
 
 
@@ -16,7 +18,7 @@ const Addtoy = () => {
     }=useForm();
     const onSubmit=(data)=>{
       
-        fetch("http://localhost:5000/toys",
+        fetch("http://localhost:5000/mytoys",
         {
             method:"post",
             headers: { "Content-Type": "application/json" },
@@ -37,6 +39,8 @@ const Addtoy = () => {
     return (
         <div>
             <Header></Header>
+            <Container style={{backgroundImage:`url(${bg})`}}>
+                <h3  className="text-center mt-5 mb-3 text-white pt-5">Add Here If You Want to Add Toy</h3>
             <div className="row row-cols-sm-1 row-cols-lg-2">
            <div className="col">
            <form onSubmit={handleSubmit(onSubmit)}>
@@ -82,6 +86,15 @@ const Addtoy = () => {
               type="number"
             />
           </div>
+          <div className="">
+          <input
+              className="p-2 m-2 w-75"
+              {...register("picture")}
+              placeholder="image link"
+              type="url"
+              defaultValue="https://i.ibb.co/y6BBZ20/download.jpg"
+            />
+          </div>
          <div className="">
          <input
               className="p-2 m-2 w-75"
@@ -107,12 +120,14 @@ const Addtoy = () => {
             />
             </div>
            <div className="">
-           <input style={{background:'LightSeaGreen'}} className="btn w-75 ps-5 pe-5 pt-2 pb-2 text-white" value="Post Toy" type="submit" />
+           <input style={{background:'LightSeaGreen'}} className="btn w-75 ms-2 ps-5 pe-5 pt-2 pb-2 mb-5 text-white" value="Post Toy" type="submit" />
            </div>
             </form>
             </div> 
             <div className="col"></div>
+           
 </div>
+</Container>
         </div>
     );
 };
