@@ -6,14 +6,14 @@ const DisneyToy = ({disneytoy}) => {
     
 
   
-    <tbody className="p-5 border shadow-lg pb-5 pt-5">
-      <tr className="p-5 m-5">
-        <td>{sellerName}</td>
-        <td>{toyName}</td>
-        <td>{subCategory}</td>
-        <td>${price}</td>
-        <td>{availableQuantity}</td>
-        <td><button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button></td>
+    <tbody className="p-3 border rounded shadow-lg pb-3 pt-3">
+      <tr className="p-5 m-5 row row-cols-sm-3 row-cols-lg-6">
+        <td className="col">{sellerName}</td>
+        <td className="col">{toyName}</td>
+        <td className="col">{subCategory}</td>
+        <td className="col">${price}</td>
+        <td className="col">{availableQuantity}</td>
+        <td className="col"><button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button></td>
       </tr>
     
      

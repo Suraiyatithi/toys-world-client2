@@ -44,8 +44,8 @@ const AllToys = () => {
                         <div className="container border shadow-lg">
             <table className="table mt-4 text-center p-3">
     <thead>
-      <tr>
-        <th>Seller Name</th>
+      <tr className="row row-cols-sm-3 row-cols-lg-6 ps-5 ms-5">
+        <th className="col">Seller Name</th>
         <th>Toy Name</th>
         <th>Sub Category</th>
         <th>Price</th>
@@ -53,9 +53,9 @@ const AllToys = () => {
         <th></th>
       </tr>
     </thead>
-    <tbody className="p-5 border shadow-lg pb-5 pt-5">
-      <tr className="p-5 m-5">
-        <td>{searchResult.sellerName}</td>
+    <tbody className="p-5 m-5 border shadow-lg pb-5 pt-5">
+      <tr className="row row-cols-sm-3 text-center row-cols-lg-6 p-5 m-5">
+        <td className="col">{searchResult.sellerName}</td>
         <td>{searchResult.toyName}</td>
         <td>{searchResult.subCategory}</td>
         <td>${searchResult.price}</td>
@@ -74,11 +74,11 @@ const AllToys = () => {
         </div>
       )}
 
-            <div className="container border shadow-lg">
-            <table className="table mt-4 text-center p-3">
+            <div className="container border border-3 border-info rounded shadow-lg">
+            <table className="table  mt-4 text-center p-3">
     <thead>
-      <tr>
-        <th>Seller Name</th>
+      <tr className="row row-cols-sm-3  row-cols-lg-6 ps-5 ms-5 text-center">
+        <th className="col">Seller Name</th>
         <th>Toy Name</th>
         <th>Sub Category</th>
         <th>Price</th>

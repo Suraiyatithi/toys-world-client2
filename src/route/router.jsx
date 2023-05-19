@@ -8,6 +8,7 @@ import LoginLayOut from "../Layout/LoginLayOut";
 import Register from "../Pages/LogIn/Register";
 import Blog from '../Pages/Blogs/Blog'
 import AllToys from "../Pages/Alltoys/AllToys";
+import Showall from "../share/Showall";
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
     {
       path:"/blog",
       element:<Blog></Blog>
+    },
+    {
+      path:':id',
+      element:<Showall></Showall>,
+      loader: ({params}) => fetch(`http://localhost:5000/toys/${params._id}`)
     }
   ]);
   export default router;
