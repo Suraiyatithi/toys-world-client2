@@ -39,9 +39,9 @@ const router = createBrowserRouter([
       element:<Blog></Blog>
     },
     {
-      path:':id',
+      path:'toys/:id',
       element:<Showall></Showall>,
-      loader: ({params}) => fetch(`http://localhost:5000/toys/${params._id}`)
+      loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
     }
   ]);
   export default router;

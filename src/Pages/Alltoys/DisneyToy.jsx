@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const DisneyToy = ({disneytoy}) => {
     const{_id,sellerName,toyName,subCategory,price,availableQuantity,picture,description}=disneytoy;
@@ -13,7 +13,7 @@ const DisneyToy = ({disneytoy}) => {
         <td className="col">{subCategory}</td>
         <td className="col">${price}</td>
         <td className="col">{availableQuantity}</td>
-        <td className="col"><button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button></td>
+        <td className="col"><Link to={`/toys/${_id}`}> <button style={{background:"LightSEaGreen"}} className="btn text-white">View Details</button></Link></td>
       </tr>
     
      
