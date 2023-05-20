@@ -54,7 +54,7 @@ const Login = () => {
         <div className='row row-cols-sm-1 row-cols-lg-2'>
             <div className="col"></div>
            
-                 <Container className='col w-50 mb-5 mt-5 pb-5 pt-5  me-3 text-white'>
+                 <Container style={{background:"DarkBlue"}} className='col w-50 mb-5 mt-5 pb-5 pt-5 rounded shadow-lg me-3 text-white '>
       <h3  className='mt-5'>Please Login</h3>
       <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

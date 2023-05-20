@@ -48,7 +48,7 @@ const Addtoy = () => {
             {errors.exampleRequired && <span>This field is required</span>}
            <div className="">
            <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("toyName")}
               placeholder="Toy Name"
               defaultValue="Barbe"
@@ -57,7 +57,7 @@ const Addtoy = () => {
 {/* _id,sellerName,toyName,subCategory,price,availableQuantity,picture,description */}
          <div className="">
          <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("sellerName", { required: true })}
               placeholder="sellerName"
               defaultValue="sellerName"
@@ -65,7 +65,7 @@ const Addtoy = () => {
          </div>
           <div className="">
           <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("price", { required: true })}
               placeholder="price"
               type="number"
@@ -73,7 +73,7 @@ const Addtoy = () => {
           </div>
           <div className="">
           <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("rating", { required: true })}
               placeholder="rating"
               type="number"
@@ -81,7 +81,7 @@ const Addtoy = () => {
           </div>
           <div className="">
           <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("availableQuantity", { required: true })}
               placeholder="availableQuantity"
               type="number"
@@ -89,7 +89,7 @@ const Addtoy = () => {
           </div>
           <div className="">
           <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("picture")}
               placeholder="image link"
               type="url"
@@ -98,7 +98,7 @@ const Addtoy = () => {
           </div>
          <div className="">
          <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               value={user?.email}
               {...register("sellerEmail")}
               placeholder="your email"
@@ -106,7 +106,7 @@ const Addtoy = () => {
             />
          </div>
               <div >
-              <select className="p-2 m-2 w-75" {...register("subCategory")}>
+              <select className="p-2 m-2 w-75 rounded shadow-lg border border-info" {...register("subCategory")}>
               <option value="Disney Princess">Disney Princess</option>
               <option value="Frozen doll">Frozen doll</option>
               <option value="animation Character">animation Character</option>
@@ -115,7 +115,7 @@ const Addtoy = () => {
               </div>
             <div className="">
             <input
-              className="p-2 m-2 w-75"
+              className="p-2 m-2 w-75 rounded shadow-lg border border-info"
               {...register("description")}
               placeholder="description"
             />

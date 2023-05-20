@@ -11,16 +11,20 @@ import AllToys from "../Pages/Alltoys/AllToys";
 import Showall from "../share/Showall";
 import Addtoy from "../Pages/AddToy/Addtoy";
 import Mytoy from "../Pages/MyToy/Mytoy";
+import Error from "../Pages/Error/Error";
+import View from "../Pages/Home/View";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Homelayout></Homelayout>,
+      errorElement:<Error></Error>
     },
     {
       path:"/",
       element:<LoginLayOut></LoginLayOut>,
+      errorElement:<Error></Error>,
       children:[{
         path:'/login',
         element:<Login></Login>
@@ -44,6 +48,11 @@ const router = createBrowserRouter([
       path:'toys/:id',
       element:<Showall></Showall>,
       loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+    },
+    {
+      path:'category/:id',
+      element:<View></View>,
+      loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
     },
     {
       path:"addtoys",
