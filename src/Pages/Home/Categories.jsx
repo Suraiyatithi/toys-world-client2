@@ -12,7 +12,7 @@ const Categories = () => {
     useEffect(() => {
         const fetchtoys = async () => {
           try {
-            const response = await fetch('http://localhost:5000/category');
+            const response = await fetch('https://toy-world-server-suraiyatithi.vercel.app/category');
             const data = await response.json();
             settoys(data);
             setLoading(false);

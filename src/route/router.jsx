@@ -47,12 +47,12 @@ const router = createBrowserRouter([
     {
       path:'toys/:id',
       element:<Showall></Showall>,
-      loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+      loader: ({params}) => fetch(`https://toy-world-server-suraiyatithi.vercel.app/toys/${params.id}`)
     },
     {
       path:'category/:id',
       element:<View></View>,
-      loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+      loader: ({params}) => fetch(`https://toy-world-server-suraiyatithi.vercel.app/category/${params.id}`)
     },
     {
       path:"addtoys",

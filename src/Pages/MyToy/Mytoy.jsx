@@ -16,7 +16,7 @@ const Mytoy = () => {
     const [toys, settoys] = useState([]);
     const [modal,setmodal]=React.useState(false)
     const [over, setover] = useState(false);
-    const url = `http://localhost:5000/mytoys?email=${user?.email}`;
+    const url = `https://toy-world-server-suraiyatithi.vercel.app/mytoys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -45,7 +45,7 @@ const Mytoy = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/mytoys/${_id}`, {
+                fetch(`https://toy-world-server-suraiyatithi.vercel.app/mytoys/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -68,7 +68,7 @@ const Mytoy = () => {
     
     const handleToyUpdate=(data)=>{
         console.log(data);
-        fetch(`http://localhost:5000/mytoys/${data._id}`,{
+        fetch(`https://toy-world-server-suraiyatithi.vercel.app/mytoys/${data._id}`,{
             method:"PUT",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(data)

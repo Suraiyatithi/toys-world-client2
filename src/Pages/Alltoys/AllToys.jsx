@@ -10,7 +10,7 @@ const AllToys = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResult, setSearchResult] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-world-server-suraiyatithi.vercel.app/toys')
             .then(res => res.json())
             .then(data => setdisneytoys(data));
     }, [])
