@@ -3,7 +3,8 @@ import bg from '../../assets/banner4.jpg'
 
 const Banner = () => {
     return (
-        <div className="row row-cols-sm-1 row-cols-lg-2 container ms-5 m-5" style={{backgroundImage:`url(${bg})`}}>
+   <div className="ms-4">
+         <div className="row row-cols-sm-1 row-cols-lg-2 container ms-5 m-5" style={{backgroundImage:`url(${bg})`}}>
           <div className="col mt-5 ps-5 pt-5  ">
             <h6 style={{color:"DarkMagenta"}} className='ps-2 fs-2 fw-bolder lh-base'>
                 Best <br />Disney Toys <br />MarketPlace
@@ -16,6 +17,7 @@ const Banner = () => {
             <div className="col">
                 <img className='w-50 mt-3 mb-3 ' src={banner} alt="" /></div> 
         </div>
+   </div>
     );
 };
 
