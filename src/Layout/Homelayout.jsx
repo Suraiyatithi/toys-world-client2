@@ -4,6 +4,7 @@ import Footer from "../share/Footer";
 import Gallary from "../Pages/Home/Gallary";
 
 import Categories from "../Pages/Home/Categories";
+import Subscription from "../Pages/Home/Subscription";
 
 
 
@@ -14,6 +15,7 @@ const Homelayout = () => {
            <Banner></Banner>
            <Categories></Categories>
            <Gallary></Gallary>
+           <Subscription></Subscription>
            
            <Footer></Footer>
 
