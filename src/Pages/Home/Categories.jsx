@@ -34,7 +34,7 @@ const Categories = () => {
  
     return (
         <div className='text-center'>
-            <h3>Popular Category</h3>
+            <h3 style={{color:'darkmagenta'}}>Popular Category</h3>
             <p><small>Most of the people like this category .here are some of the simple <br />of our toy category you will definetly see all the category added by our speacial member,you can
             <br /> alse added your toy collection.</small></p>
            <Link to='/alltoys'> <button style={{background:"lightseagreen"}} className='btn '>Go to All Category <FaArrowRight></FaArrowRight> </button></Link>

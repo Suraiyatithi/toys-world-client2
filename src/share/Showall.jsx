@@ -1,5 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "./Header";
+import { FaStar } from 'react-icons/fa';
+import { FaRegStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 
 
 
@@ -18,7 +21,12 @@ const Showall = () => {
 <p>{sellerEmail}</p>
 <p><small>{description}</small></p>
 <h4>${price}</h4>
-<p><small>{rating}</small></p>
+<p>         <Rating
+  placeholderRating={rating}
+  emptySymbol={<FaRegStar/>}
+  placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+  fullSymbol={<FaStar/>}
+/> <small>{rating}</small></p>
 <p>Quantity available:{availableQuantity}</p>
             </div>
             <div className="col ps-5">
