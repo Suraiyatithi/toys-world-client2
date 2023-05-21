@@ -3,9 +3,9 @@
  Best Chef and recipe platform for finding the desire recipe you are looking for....
 
 - Live Link
-Hosted in Netlify -> [Baking-queen](https://baking-queen-69016.web.app/)
+Hosted in firebase -> [Toy-World](https://toy-world-a669f.web.app/)
 
--server site like(https://baking-queen-server-suraiyatithi.vercel.app/chef/1)
+-server site like(https://toy-world-server-suraiyatithi.vercel.app/)
 
 
 - Starter Template
