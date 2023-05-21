@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import bg from '../assets/coove3r.jpg'
+import logo from '../assets/magicalland.jpg'
 
 const Footer = () => {
     return (
@@ -8,8 +9,8 @@ const Footer = () => {
           <h4 className='text-center mt-3 mb-3'>About Us</h4>
           <div className="row row-cols-sm-1 row-cols-lg-3 mt-4">
           <div className="">
-            <img src="" alt="" />
-            <h5>Magical Land</h5>
+            <img className='w-50' src={logo} alt="" />
+            <h5 style={{color:"brown"}} className='mt-3'>Magical Land</h5>
 
           </div>
              
