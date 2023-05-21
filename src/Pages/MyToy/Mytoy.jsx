@@ -9,6 +9,7 @@ import bg from '../../assets/3644477.jpg';
 
 
 import Swal from "sweetalert2";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 
 const Mytoy = () => {
@@ -31,6 +32,14 @@ const Mytoy = () => {
     //         settoys(data);
     //       });
     //   }, [user, over]);
+    const handleSort = () => {
+        const sortedToys = [...toys].sort((a, b) => a.price - b.price);
+        settoys(sortedToys);
+      };
+      const handleSortdis = () => {
+        const sortedToys = [...toys].sort((a, b) => b.price - a.price);
+        settoys(sortedToys);
+      };
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -79,7 +88,7 @@ const Mytoy = () => {
                setover(!over)
                Swal.fire({
                 title: 'Success!',
-                text: 'Coffee Updated Successfully',
+                text: 'Toy Updated Successfully',
                 icon: 'success',
                 confirmButtonText: 'Cool'
             })
@@ -94,6 +103,8 @@ const Mytoy = () => {
     <div className="p-5" style={{backgroundImage:`url(${bg})`}}>
     <Container>
             <h3 style={{color:"darkmagenta"}} className="text-center">My Submission List</h3>
+            <button style={{background:"LightSeaGreen"}} className="btn m-2 p-2 text-white" onClick={handleSort}>Price <FaArrowUp></FaArrowUp></button>
+            <button style={{background:"LightSeaGreen"}} className="btn m-2 p-2 text-white" onClick={handleSortdis}> Price<FaArrowDown></FaArrowDown></button>
             <div className="container border border-3 border-info rounded shadow-lg">
             <table className="table  mt-4 text-center p-3">
     <thead>

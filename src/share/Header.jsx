@@ -5,6 +5,7 @@ import logo from '../assets/magicalland.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import '../share/Header.css'
 
 
 

@@ -27,6 +27,15 @@ const Addtoy = () => {
         })
         .then((res) => res.json())
         .then((result) => {
+          if(result.insertedId){
+            setover(!over)
+            Swal.fire({
+             title: 'Success!',
+             text: 'Toy Updated Successfully',
+             icon: 'success',
+             confirmButtonText: 'Cool'
+         })
+         }
           console.log(result);
         });
       console.log(data);

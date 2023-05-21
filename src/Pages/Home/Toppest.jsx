@@ -6,8 +6,16 @@ import trophy from '../../assets/tropf.jpg'
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import Rating from 'react-rating';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+
 
 const Toppest = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
         <div className='container mb-5'>
             <h3 style={{color:"darkmagenta"}} className='text-center '>Toppest Seller</h3>
@@ -76,7 +84,7 @@ const Toppest = () => {
 
                 </div>
                 <div className="col">
-                    <img className='w-100 ps-4 ms-5 mt-5' src={trophy} alt="" />
+                    <img data-aos="fade-up"    data-aos-duration="1000" className='w-100 ps-4 ms-5 mt-5' src={trophy} alt="" />
                 </div>
             </div>
         </div>
