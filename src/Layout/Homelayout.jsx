@@ -5,6 +5,7 @@ import Gallary from "../Pages/Home/Gallary";
 
 import Categories from "../Pages/Home/Categories";
 import Subscription from "../Pages/Home/Subscription";
+import Toppest from "../Pages/Home/Toppest";
 
 
 
@@ -15,8 +16,9 @@ const Homelayout = () => {
            <Banner></Banner>
            <Categories></Categories>
            <Gallary></Gallary>
+         
+           <Toppest></Toppest>
            <Subscription></Subscription>
-           
            <Footer></Footer>
 
         </div>
