@@ -13,6 +13,7 @@ import Addtoy from "../Pages/AddToy/Addtoy";
 import Mytoy from "../Pages/MyToy/Mytoy";
 import Error from "../Pages/Error/Error";
 import View from "../Pages/Home/View";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -46,17 +47,17 @@ const router = createBrowserRouter([
     },
     {
       path:'toys/:id',
-      element:<Showall></Showall>,
+      element:<PrivateRoute><Showall></Showall></PrivateRoute>,
       loader: ({params}) => fetch(`https://toy-world-server-suraiyatithi.vercel.app/toys/${params.id}`)
     },
     {
       path:'category/:id',
-      element:<View></View>,
+      element:<PrivateRoute><View></View></PrivateRoute>,
       loader: ({params}) => fetch(`https://toy-world-server-suraiyatithi.vercel.app/category/${params.id}`)
     },
     {
       path:"addtoys",
-      element:<Addtoy></Addtoy>
+      element:<PrivateRoute><Addtoy></Addtoy></PrivateRoute>
     },
     {
       path:'mytoys',

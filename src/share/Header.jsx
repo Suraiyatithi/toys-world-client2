@@ -4,11 +4,30 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/magicalland.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 
 const Header = () => {
-    const {user}=useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error));
+    }
+    const addhandle=()=>{
+        if(!user){
+
+    
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Please Log in First !',
+              footer: '<a href="">Why do I have this issue?</a>'
+            })
+        }
+    }
     return (
         <div >
           
@@ -22,38 +41,40 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                      
                         <Nav className="mx-auto me-3">
-                           <Link to='/'> <h6>Home</h6></Link>
+                           <Link className='text-decoration-none text-dark' to='/'> <h6>Home</h6></Link>
   </Nav>
           
-  <Nav className='me-3 '><Link to='/blog'> <h6>Blogs</h6></Link></Nav>
+  <Nav className='me-3 '><Link className='text-decoration-none text-dark' to='/blog'> <h6>Blogs</h6></Link></Nav>
                 <Nav>
                        
-          <Nav className='me-3'>
-           <Link to='/alltoys'> <h6>All Toys </h6></Link>
+          <Nav className='me-3 mt-1'>
+           <Link className='text-decoration-none text-dark' to='/alltoys'> <h6>All Toys </h6></Link>
         </Nav>
-          <Nav className='me-3'>
-           <Link to='/mytoys'> <h6>My Toys </h6></Link>
+         {
+            user &&
+            <Nav className='me-3 mt-1'>
+            <Link className='text-decoration-none text-dark' to='/mytoys'> <h6>My Toys </h6></Link>
+           </Nav>
+         }
+          <Nav onClick={addhandle} className='me-3 mt-1'>
+          <Link  className='text-decoration-none text-dark' to='/addtoys'>  <h6>Add a Toys </h6></Link>
           </Nav>
-          <Nav className='me-3'>
-          <Link to='/addtoys'>  <h6>Add a Toys </h6></Link>
-          </Nav>
-                {/* {
-                                user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
-                            } */}
-  
+    
 {
     user && <div className="profile">
         <img style={{height:"30px",weight:"30px"}} className='img img-fluid rounded-circle mt-2 ms-4' src={user?.photoURL}></img>
-    <div className="name">{user.displayname}</div>
+    <div className="name">{user?.displayname}</div>
     </div>
 }
 
                           
-                                <Button  className='ms-3 '  style={{background:"LightSeaGreen"}}>Logout</Button>
+                               
+                                 {user ?
+                                <Button  className='ms-3' onClick={handleLogOut} style={{background:"LightSEaGreen"}}>Logout</Button> :
                                 <Link to="/login">
                                     <Button className='ms-3' style={{background:"LightSEaGreen"}}>Login</Button>
                                 </Link>
-                            
+                            }
                         </Nav>
                       
                     </Navbar.Collapse>
