@@ -5,24 +5,35 @@ import logo from '../assets/magicalland.jpg'
 
 const Footer = () => {
     return (
-        <div  className='text-white pt-5 pb-5' style={{backgroundImage:`url(${bg})`}}>
-          <h4 className='text-center mt-3 mb-3'>About Us</h4>
-          <div className="row row-cols-sm-1 row-cols-lg-3 mt-4">
-          <div className="">
-            <img className='w-50' src={logo} alt="" />
-            <h5 style={{color:"brown"}} className='mt-3'>Magical Land</h5>
-
-          </div>
-             
-            <div className="">
-            <h6>Contact us</h6>
-            <p>Phone:+880178962499</p>
-            <p><small>Email:<Link to='magicalland@gmail.com'>magicalland@gmail.com</Link></small></p>
-            <p><small>google:<Link to='google.com'>www.google.magicalland.com</Link></small></p>
-            </div>
-            <div className=""></div>
-           
-          </div>
+        <div  className='text-white'>
+     <div style={{background:"LightSeaGreen"}} className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 p-5">
+      <div className=" ">
+     <h4 className='text-center mt-3 mb-3'>About Us</h4>
+     <p>we provide the best disney product also we reach the client heart as it is related to child we are always concern about.</p>
+</div>
+<div className="">
+  <h4 className='mb-3 mt-3'>Contact Us</h4>
+  <p>Gulshan,Dhaka Division ,Dhaka-1212</p>
+  <p>disneyworld@gmail.com</p>
+  <p>+990687767889</p>
+</div>
+<div className="">
+  <h4 className='mb-3 mt-3'>Information</h4>
+  <p>Terms and conditions</p>
+  <p>Privacy policy</p>
+<p>Product Quality</p>
+<p>Adding Product</p>
+<p>Payment methods</p>
+</div>
+<div className="">
+  <h4 className='mt-3 mb-3 '>Send Us Feedback</h4>
+  <input className='p-2' type="text" name="" id="" />
+  <button style={{background:"pink"}} className='btn text-white'>Send</button>
+</div>
+     </div>
+     <div style={{background:"pink"}} className="text-center">
+      <p className='p-2'>Copyright © 2022 the privacy policy and terms of Disney world.</p>
+     </div>
         </div>
     );
 };

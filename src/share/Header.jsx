@@ -29,10 +29,15 @@ const Header = () => {
             })
         }
     }
+    // bg='light' variant="light"
     return (
         <div >
+            <div  style={{background:"LightSEaGreen"}} className="p-1 text-center text-white ">
+                <p>Up to 50% discount on summer Collection!!<button  style={{background:"pink"}}  className='btn ms-2 text-white'> Shop now</button> </p>
+
+            </div>
           
-          <Navbar collapseOnSelect expand="lg" bg='light' variant="light">
+          <Navbar style={{background:''}} collapseOnSelect expand="lg" >
                 <Container>
                 <Nav className=''>
                             <img style={{width:"50px "}} src={logo} alt="" />
@@ -41,24 +46,30 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                      
-                        <Nav className="mx-auto me-3">
-                           <Link className='text-decoration-none text-dark' to='/'> <h6>Home</h6></Link>
+                        <Nav className="mx-auto me-4">
+                           <Link className='text-decoration-none text-dark' to='/'> <p>Home</p></Link>
   </Nav>
           
-  <Nav className='me-3 '><Link className='text-decoration-none text-dark' to='/blog'> <h6>Blogs</h6></Link></Nav>
+  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Blogs</p></Link></Nav>
+ 
+  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Best Collection</p></Link></Nav>
+  <Nav className='me-4'><Link className='text-decoration-none text-dark' to='/blog'> <p>Discount</p></Link></Nav>
+  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Todays Offer</p></Link></Nav>
+
                 <Nav>
+              
                        
-          <Nav className='me-3 mt-1'>
-           <Link className='text-decoration-none text-dark' to='/alltoys'> <h6>All Toys </h6></Link>
+          <Nav className='me-4 mt-1'>
+           <Link className='text-decoration-none text-dark' to='/alltoys'> <p>All Toys </p></Link>
         </Nav>
          {
             user &&
             <Nav className='me-3 mt-1'>
-            <Link className='text-decoration-none text-dark' to='/mytoys'> <h6>My Toys </h6></Link>
+            <Link className='text-decoration-none text-dark' to='/mytoys'> <p>My Toys </p></Link>
            </Nav>
          }
           <Nav onClick={addhandle} className='me-3 mt-1'>
-          <Link  className='text-decoration-none text-dark' to='/addtoys'>  <h6>Add a Toys </h6></Link>
+          <Link  className='text-decoration-none text-dark' to='/addtoys'>  <p>Add a Toys </p></Link>
           </Nav>
     
 {

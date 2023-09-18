@@ -9,7 +9,7 @@ import Rating from 'react-rating';
 const ToyCard = ({toys}) => {
     const{_id,sellerName,toyName,rating,subCategory,price,availableQuantity,picture,description}=toys
     return (
-        <div className='col ps-5 mb-5'>
+        <div data-aos="fade-right" className='col ps-5 mb-5'>
    <div className="">
    <Card style={{ width: '18rem' }}>
       <Card.Img style={{maxHeight:'14rem'}} variant="top" src={picture} />

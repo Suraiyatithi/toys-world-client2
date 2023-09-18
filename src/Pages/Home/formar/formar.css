@@ -1,0 +1,100 @@
+@import 'aos/dist/aos.css';
+.my-custom-heading {
+    font-size: 40px;
+    align-items: center;
+  }
+  .rounded-background {
+    background-color: lightseagreen; /* Set your desired background color */
+    /* border-radius: 20px; 
+    padding: 20px;  */
+    height: 300px;
+    width: 300px;
+    border-radius: 50%; /* Make the div a perfect circle */
+    text-align: center; /* Optional: Center content horizontally and vertically */
+    line-height: 100px; /* Optional: Center content vertically */
+    color: #fff;
+    
+    border: 20px solid pink;
+  }
+  /* Add this CSS to your stylesheet or a style component */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .previous-price {
+    text-decoration: line-through;
+    color: chartreuse;
+  }
+  .background {
+    /* background-image: url('your-image.jpg'); */
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+    width: 100%;
+    /* overflow-y: auto; Adds a scrollbar if the content exceeds the viewport height */
+  }
+  .banner{
+    background-size: cover;
+    height: 400px;
+    width: 700px;
+  }
+  .circle{
+    border-radius: 50%;
+   
+  }
+  .parallelogram {
+ 
+    transform: skew(20deg); /* Skew the element to create the parallelogram shape */
+    margin: 50px; /* Adjust margin for spacing */
+}
+/* Add this CSS code to your styles.css or your component's CSS file */
+
+/* Product card container */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+  position: relative; /* Added for the pseudo-element */
+}
+
+/* Transparent background on hover */
+.product-card:hover {
+  background-color: rgba(238, 177, 225, 0.696);
+}
+
+/* Discount price style */
+.discount-price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  display: none; /* Initially hidden */
+}
+
+/* Show discount price on hover */
+.product-card:hover .discount-price {
+  display: block;
+}

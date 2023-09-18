@@ -1,0 +1,22 @@
+/* Add a shining border animation */
+  /* styles.css */
+  @import 'aos/dist/aos.css';
+
+@keyframes shining {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    }
+  }
+  
+  /* Apply the animation to the element with the "shining-border" class */
+  .shining-border {
+    animation: shining 2s infinite;
+  }
+
+  
