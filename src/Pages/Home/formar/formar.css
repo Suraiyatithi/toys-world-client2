@@ -98,3 +98,13 @@
 .product-card:hover .discount-price {
   display: block;
 }
+/* Change the navigation bar color using Swiper's class */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  background-color: #f5a5cc;
+  color: lightseagreen;
+  border-radius: 50%;
+  /* padding: 10px 10px 10px 10px ; */
+  height: 4rem;
+  width: 4rem; /* Replace with your desired color code */
+}

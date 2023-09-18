@@ -34,8 +34,8 @@ const Littletitle = () => {
 </div>
 <div className="col-md-8 col-lg-8 col-sm-12">
     <h6 data-aos="fade-right">Flash Sale</h6>
-    <h1 data-aos="fade-right" className='mb-3'>Baby's Choice</h1>
-    <p data-aos="fade-right" className='pb-5'>35% Off For all collection</p>
+    <h1 data-aos="fade-right" className='mb-4'>Baby's Choice</h1>
+    <p data-aos="fade-right" className=''>35% Off For all collection</p>
 </div>
 </div>
                 </div>
@@ -48,7 +48,7 @@ const Littletitle = () => {
                     <div className="col-md-8 col-lg-8 col-sm-12">
     <h6 data-aos="fade-left">Funny Toys</h6>
     <h1 data-aos="fade-left">Disney Choice</h1>
-    <p data-aos="fade-left">25% Off For all collection</p>
+    <p data-aos="fade-left pb-1">25% Off For all collection</p>
 </div>
                     </div>
            

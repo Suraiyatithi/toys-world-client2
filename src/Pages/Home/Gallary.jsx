@@ -51,14 +51,14 @@ const Gallary = () => {
 <img data-aos="fade-right"  className='col mb-2 w-100' src={col3}/>
 
  
-<img  data-aos="fade-right" className='col mt-5 w-100' src={col4}/>
+<img  data-aos="fade-right" className='col mt-4 w-100' src={col4}/>
 </div>
 
 
 <div className="">
 <img data-aos="fade-left" className='col mb-4 w-100 ' src={col5}/>
 {/* <img className='col  w-100' src={col6}/> */}
-<img data-aos="fade-left" className='col mb-4 mt-5 w-100' src={col7}/>
+<img data-aos="fade-left" className='col mb-4 mt-3 w-100' src={col7}/>
 
 </div>
 

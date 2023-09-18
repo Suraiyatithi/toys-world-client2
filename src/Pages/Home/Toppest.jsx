@@ -2,7 +2,7 @@ import React from 'react';
 import per1 from '../../assets/person1.jpg';
 import per2 from '../../assets/person2.jpg';
 import per3 from '../../assets/person3.jpg';
-import trophy from '../../assets/tropf.jpg'
+
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import Rating from 'react-rating';
@@ -44,7 +44,7 @@ const Toppest = () => {
         top: '0',
         left: '80%',
         transform: 'translateX(-50%)',
-        marginTop: '-8rem', // Adjust this margin as needed
+        marginTop: '-6rem', // Adjust this margin as needed
         width: '50%',
        
       };

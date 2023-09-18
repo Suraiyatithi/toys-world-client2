@@ -1,7 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import bg from '../assets/coove3r.jpg'
-import logo from '../assets/magicalland.jpg'
+
 
 const Footer = () => {
     return (

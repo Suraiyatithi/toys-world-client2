@@ -26,6 +26,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import 'swiper/swiper-bundle.css';
 
 
 
@@ -52,12 +53,12 @@ const BestSell = () => {
     return (
         <div>
             <div className="row">
-                <div className="col-sm-12 col-md-6 col-lg-4 p-5">
+                <div className="col-sm-12 col-md-6 col-lg-4 p-5 mt-4">
                     <img data-aos="fade-right" className='w-100' src={img1} alt="" />
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                   <h3 data-aos="fade-right" className='text-center'>parent Favouite Product<FaArrowRight></FaArrowRight></h3>
-                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
         <SwiperSlide>
         <div className="ps-5 text-center ms-5">
         <div data-aos="fade-right" className="d-flex justify-between">

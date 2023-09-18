@@ -46,29 +46,29 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                      
-                        <Nav className="mx-auto me-4">
+                        <Nav className="mx-auto me-2">
                            <Link className='text-decoration-none text-dark' to='/'> <p>Home</p></Link>
   </Nav>
           
-  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Blogs</p></Link></Nav>
+  <Nav className='me-3 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Blogs</p></Link></Nav>
  
-  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Best Collection</p></Link></Nav>
-  <Nav className='me-4'><Link className='text-decoration-none text-dark' to='/blog'> <p>Discount</p></Link></Nav>
-  <Nav className='me-4 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Todays Offer</p></Link></Nav>
+  <Nav className='me-3 '><Link className='text-decoration-none text-dark' to='/blog'> <p> Collection</p></Link></Nav>
+  <Nav className='me-3'><Link className='text-decoration-none text-dark' to='/blog'> <p>Discount</p></Link></Nav>
+  <Nav className='me-3 '><Link className='text-decoration-none text-dark' to='/blog'> <p>Offer</p></Link></Nav>
 
                 <Nav>
               
                        
-          <Nav className='me-4 mt-1'>
+          <Nav className='me-2 mt-1'>
            <Link className='text-decoration-none text-dark' to='/alltoys'> <p>All Toys </p></Link>
         </Nav>
          {
             user &&
-            <Nav className='me-3 mt-1'>
+            <Nav className='me-2 mt-1'>
             <Link className='text-decoration-none text-dark' to='/mytoys'> <p>My Toys </p></Link>
            </Nav>
          }
-          <Nav onClick={addhandle} className='me-3 mt-1'>
+          <Nav onClick={addhandle} className='me-2 mt-1'>
           <Link  className='text-decoration-none text-dark' to='/addtoys'>  <p>Add a Toys </p></Link>
           </Nav>
     

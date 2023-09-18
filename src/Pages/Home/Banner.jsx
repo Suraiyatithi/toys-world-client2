@@ -3,9 +3,6 @@ import bg from '../../assets/toybannerbfg.jpg'
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../../assets/bear-infant-toy-baby-f29b0fee97534d69d98f9e80f9afcab0.png';
 import img2 from '../../assets/infant-child-care-stock-photography-play-child-care-a68ff3d9b2360a287e601a63bab57553.png';
-import img3 from '../../assets/educational-toys-child-care-toddler-toy-55cbdea0bd57095cce6e5398d8479461.png'
-import './formar/formar.css'
-import img4 from '../../assets/bannner44.png'
 import img6 from '../../assets/bannerfinnal.png'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
